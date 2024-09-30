@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/tracking.css') }}">
-    <title>Document</title>
+    <title>Tracking</title>
   </head>
   <body>
     <h1>Suivi d'un colis</h1>
@@ -22,10 +22,11 @@
         <p><span>Départ:</span> {{ $parcel['address_dep'] }}</p>
         <p><span>Arrivée:</span> {{ $parcel['address_arr'] }}</p>
         <p><span>Statut:</span> {{ $parcel['status'] }}</p>
-        <p><span>Poids:</span> {{ $parcel['weight'] }}</p>
+        <p><span>Poids:</span> {{ $parcel['weight'] }} g</p>
       @endif
     </div>
-
-    <a href="/">Retour</a>
+    <div class="btn-content">
+      <a href="/">Retour</a>
+    </div>
   </body>
 </html>

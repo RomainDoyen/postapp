@@ -22,6 +22,8 @@
     @if (isset($message))
       <p>{{ $message }}</p>
     @endif
-    <a href="/">Retour</a>
+    <div class="btn-content">
+      <a href="/">Retour</a>
+    </div>
   </body>
 </html>

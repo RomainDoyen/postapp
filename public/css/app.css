@@ -7,3 +7,22 @@
 :root {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.btn-content {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btn-content a {
+  margin-right: 10px;
+  background-color: rgb(255, 183, 0);
+  color: #373636;
+  padding: 15px 20px;
+  border-radius: 50px;
+}
+
+.btn-content a:hover {
+  background-color: rgb(209, 153, 10);
+  color: white;
+}
