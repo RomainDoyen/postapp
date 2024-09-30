@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/tracking.css') }}">
     <title>Document</title>
   </head>
   <body>
@@ -13,14 +15,16 @@
       <button type="submit">Rechercher</button>
     </form>
 
-    @if (isset($parcel))
-      <h2>Informations sur le colis</h2>
-      <p>Numéro de suivi: {{ $parcel['tracking_number'] }}</p>
-      <p>Départ: {{ $parcel['address_dep'] }}</p>
-      <p>Arrivée: {{ $parcel['address_arr'] }}</p>
-      <p>Statut: {{ $parcel['status'] }}</p>
-      <p>Poids: {{ $parcel['weight'] }}</p>
-    @endif
+    <div class="info-content">
+      @if (isset($parcel))
+        <h2>Informations sur le colis</h2>
+        <p><span>Numéro de suivi:</span> {{ $parcel['tracking_number'] }}</p>
+        <p><span>Départ:</span> {{ $parcel['address_dep'] }}</p>
+        <p><span>Arrivée:</span> {{ $parcel['address_arr'] }}</p>
+        <p><span>Statut:</span> {{ $parcel['status'] }}</p>
+        <p><span>Poids:</span> {{ $parcel['weight'] }}</p>
+      @endif
+    </div>
 
     <a href="/">Retour</a>
   </body>
